@@ -49,6 +49,36 @@ const tracks = [
 
 //Your code comes below this line
 
+//First track name
+trackName.textContent = tracks[0].name;
+//First track artist
+trackArtist.textContent = tracks[0].artist;
+
+//Previous and next buttons
+let nextTrackCounter = 0;
+   nextButton.addEventListener("click", () =>{
+  if(nextTrackCounter ===1){
+  document.body.classList.remove("player-bg3")
+  document.body.classList.add("player-bg1")
+  nextTrackCounter = 0;
+  }else{
+  document.body.classList.add("player-bg3")
+  nextTrackCounter++;
+  }
+  });
+
+let prevTrackCounter = 0;
+prevButton.addEventListener("click", () => {
+if (prevTrackCounter === 2) {
+document.body.classList.add("player-bg3");
+prevTrackCounter = 0;
+} else {
+document.body.classList.add("player-bg3");
+prevTrackCounter++;
+}
+});
+
+//Unsolved: When pressing the button with the class 'prev-track' twice followd by pressing the button with the class 'next-track' the body of the page should have the class 'player-bg1'
 
 
 //Your code comes above this line
