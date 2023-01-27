@@ -1,3 +1,12 @@
+//When the page first loads the innerText of the div with the class 'track-name' is 'Night Owl'
+//When the page first loads the innerText of the div with the class 'track-artist' is 'Broke For Free'
+
+//When pressing the button with the class 'next-track' the body of the page should have the class 'player-bg3'
+//When pressing the button with the class 'next-track' twice the body of the page should have the class 'player-bg1'
+
+//When pressing the button with the class 'prev-track' twice the body of the page should have the class 'player-bg3'
+//When pressing the button with the class 'prev-track' twice followd by pressing the button with the class 'next-track' the body of the page should have the class 'player-bg1'
+
 const nowPlaying = document.querySelector('.now-playing');
 const trackArt = document.querySelector('.track-art');
 const trackName = document.querySelector('.track-name');
