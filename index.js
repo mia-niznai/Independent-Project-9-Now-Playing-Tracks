@@ -49,36 +49,65 @@ const tracks = [
 
 //Your code comes below this line
 
-//First track name
+//Task 1
 trackName.textContent = tracks[0].name;
-//First track artist
 trackArtist.textContent = tracks[0].artist;
 
-//Previous and next buttons
-let nextTrackCounter = 0;
-   nextButton.addEventListener("click", () =>{
-  if(nextTrackCounter ===1){
-  document.body.classList.remove("player-bg3")
-  document.body.classList.add("player-bg1")
-  nextTrackCounter = 0;
-  }else{
-  document.body.classList.add("player-bg3")
-  nextTrackCounter++;
-  }
-  });
+//Task 2
 
-let prevTrackCounter = 0;
-prevButton.addEventListener("click", () => {
-if (prevTrackCounter === 2) {
-document.body.classList.add("player-bg3");
-prevTrackCounter = 0;
-} else {
-document.body.classList.add("player-bg3");
-prevTrackCounter++;
-}
+const body = document.querySelector('body');
+const prevTrackBtn = document.querySelector('.prev-track');
+const nextTrackBtn = document.querySelector('.next-track');
+const colorArray = ["player-bg1", "player-bg2", "player-bg3"];
+let currentColorIndex = 1; // starting index is 1 to match "green"
+
+prevTrackBtn.addEventListener('click', () => {
+  // remove current color class
+  body.classList.remove(colorArray[currentColorIndex]);
+  // update current color index and add previous color class
+  currentColorIndex = currentColorIndex > 0 ? currentColorIndex - 1 : colorArray.length - 1;
+  body.classList.add(colorArray[currentColorIndex]);
 });
 
-//Unsolved: When pressing the button with the class 'prev-track' twice followd by pressing the button with the class 'next-track' the body of the page should have the class 'player-bg1'
+nextTrackBtn.addEventListener('click', () => {
+  // remove current color class
+  body.classList.remove(colorArray[currentColorIndex]);
+  // update current color index and add next color class
+  currentColorIndex = currentColorIndex < colorArray.length - 1 ? currentColorIndex + 1 : 0;
+  body.classList.add(colorArray[currentColorIndex]);
+});
+
+//SECOND VERSION FROM SECOND TASK (From Ana)
+// const bodyElement = document.body; 
+// nextButton.addEventListener('click', function() {
+//     if (!bodyElement.className) {
+//       bodyElement.classList.add('player-bg1');
+//     }else if (bodyElement.className === 'player-bg1') {
+//       bodyElement.classList.remove('player-bg1');
+//       bodyElement.classList.add('player-bg2');
+//     } else if (bodyElement.className === 'player-bg2') {
+//       bodyElement.classList.remove('player-bg2');
+//       bodyElement.classList.add('player-bg3');
+//     } else if (bodyElement.className === 'player-bg3') {
+//       bodyElement.classList.remove('player-bg3');
+//       bodyElement.classList.add('player-bg1');
+//     };
+//   });
+
+//   prevButton.addEventListener('click', function() {
+//     if (!bodyElement.className) {
+//       bodyElement.classList.add('player-bg1');
+//     } else if (bodyElement.className === 'player-bg1') {
+//       bodyElement.classList.remove('player-bg1');
+//       bodyElement.classList.add('player-bg3');
+//     } else if (bodyElement.className === 'player-bg3') {
+//       bodyElement.classList.remove('player-bg3');
+//       bodyElement.classList.add('player-bg2');
+//     } else if (bodyElement.className === 'player-bg2') {
+//       bodyElement.classList.remove('player-bg2');
+//       bodyElement.classList.add('player-bg1');
+//     };
+//   });
 
 
 //Your code comes above this line
