@@ -1,3 +1,10 @@
+Task 1
+When opening the webpage, the first track in the tracklist should be displayed.
+
+Task 2
+When the user clicks the divs with the class prev-track or prev-track, the webpage’s background changes to the previous or next color respectively, from the color array of [“red”, “green”, “blue”] by adding to the body element from classes player-bg1 or player-bg2 or player-bg3.
+Ex: Because the web page starts with the green background, when pressing the next button the body's background is set to blue by adding the class player-bg3 to the body element.
+
 //When the page first loads the innerText of the div with the class 'track-name' is 'Night Owl'
 //When the page first loads the innerText of the div with the class 'track-artist' is 'Broke For Free'
 
