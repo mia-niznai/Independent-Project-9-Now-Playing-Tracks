@@ -84,37 +84,4 @@ nextTrackBtn.addEventListener('click', () => {
   body.classList.add(colorArray[currentColorIndex]);
 });
 
-//SECOND VERSION FROM SECOND TASK (From Ana)
-// const bodyElement = document.body; 
-// nextButton.addEventListener('click', function() {
-//     if (!bodyElement.className) {
-//       bodyElement.classList.add('player-bg1');
-//     }else if (bodyElement.className === 'player-bg1') {
-//       bodyElement.classList.remove('player-bg1');
-//       bodyElement.classList.add('player-bg2');
-//     } else if (bodyElement.className === 'player-bg2') {
-//       bodyElement.classList.remove('player-bg2');
-//       bodyElement.classList.add('player-bg3');
-//     } else if (bodyElement.className === 'player-bg3') {
-//       bodyElement.classList.remove('player-bg3');
-//       bodyElement.classList.add('player-bg1');
-//     };
-//   });
-
-//   prevButton.addEventListener('click', function() {
-//     if (!bodyElement.className) {
-//       bodyElement.classList.add('player-bg1');
-//     } else if (bodyElement.className === 'player-bg1') {
-//       bodyElement.classList.remove('player-bg1');
-//       bodyElement.classList.add('player-bg3');
-//     } else if (bodyElement.className === 'player-bg3') {
-//       bodyElement.classList.remove('player-bg3');
-//       bodyElement.classList.add('player-bg2');
-//     } else if (bodyElement.className === 'player-bg2') {
-//       bodyElement.classList.remove('player-bg2');
-//       bodyElement.classList.add('player-bg1');
-//     };
-//   });
-
-
 //Your code comes above this line
